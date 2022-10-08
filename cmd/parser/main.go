@@ -8,16 +8,16 @@ import (
 )
 
 func main() {
-	// для ввода через панель https://ya.ru
+	// for input via terminal
 	//for _, url := range os.Args[1:] {
 
-	// слайс линков из заданного списка
+	// for using list of urls
 	links := urls.Catalog()     //-----
 	for _, url := range links { //-----
 
 		fmt.Println("links on page = ", url)
 
-		// поиск линков на странице
+		// looking for links on page
 		var answerlinks []string
 		answerlinks = finder.Urlfinder(url)
 		for _, link := range answerlinks {
